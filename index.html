@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSIGHT - Notícias Neon</title>
+<style>
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #fff;
+    line-height: 1.8;
+  }
+
+  header {
+    background: #ff0055;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff00aa;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff0055;
+  }
+
+  .noticia {
+    margin-bottom: 50px;
+  }
+
+  .imagem-manchete img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ff0055;
+    margin-bottom: 20px;
+  }
+
+  .texto-noticia h2 {
+    font-size: 2.2rem;
+    color: #ff3399;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #ff3399;
+  }
+
+  .texto-noticia p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .ler-mais-btn, .ler-menos-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff0055;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #ff0055;
+    transition: 0.3s;
+    margin-top: 10px;
+  }
+
+  .ler-mais-btn:hover, .ler-menos-btn:hover {
+    background-color: #ff3399;
+  }
+
+  .full-text {
+    display: none;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #ddd;
+  }
+
+  .imagem-meliante {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .imagem-meliante img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ff0055;
+  }
+</style>
+</head>
+<body>
+
+<header>INSIGHTNEWS</header>
+
+<div class="container">
+
+  <!-- Notícia 1 -->
+  <div class="noticia">
+    <div class="imagem-manchete">
+      <img src="https://i.postimg.cc/j2nhZz4s/download-2.jpg" alt=".">
+    </div>
+    <div class="texto-noticia">
+      <h2>Briga Escolar Choca Comunidade Local</h2>
+      <p>Um incidente lamentável envolvendo estudantes do ensino médio foi registrado recentemente, gerando grande repercussão entre pais e professores.</p>
+      <button class="ler-mais-btn" onclick="mostrarNoticia(this)">Ler Mais</button>
+      <div class="full-text">
+        <p>
+          Bryan Nagossi, 18 anos, estudante do terceiro ano do ensino médio, foi expulso da Escola Marco Antônio Mencacci após agredir Renan, aluno do primeiro ano, em um episódio fora do horário escolar. 
+          A situação destaca a necessidade de medidas preventivas rigorosas para garantir a segurança no ambiente escolar, assim como políticas eficazes de mediação de conflitos entre alunos.
+        </p>
+        <div class="imagem-meliante">
+          <img src="https://i.postimg.cc/prVHjLfY/Captura-de-tela-2025-09-26-093217.png" alt="bryan nagossi">
+        </div>
+        <button class="ler-menos-btn" onclick="esconderNoticia(this)">Ler Menos</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notícia 2 -->
+  <div class="noticia">
+    <div class="imagem-manchete">
+      <img src="https://i.postimg.cc/ydvnfQ9Z/download.jpg" alt="festival">
+    </div>
+    <div class="texto-noticia">
+      <h2>Festival de Música Local Atraí Jovens da Cidade</h2>
+      <p>O festival anual de música atraiu milhares de adolescentes, promovendo cultura e lazer na cidade.</p>
+      <button class="ler-mais-btn" onclick="mostrarNoticia(this)">Ler Mais</button>
+      <div class="full-text">
+        <p>
+          O Festival Urbano reuniu artistas locais e bandas de rock e pop, oferecendo uma experiência segura e divertida para jovens da região. Os organizadores destacaram a importância de eventos culturais para a socialização e expressão artística dos adolescentes.
+        </p>
+        <div class="imagem-meliante">
+          <img src="https://i.postimg.cc/vBPm2zBH/images.webp" alt="Foto Artista">
+        </div>
+        <button class="ler-menos-btn" onclick="esconderNoticia(this)">Ler Menos</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notícia 3 -->
+  <div class="noticia">
+    <div class="imagem-manchete">
+      <img src="https://i.postimg.cc/zf92T1Lg/download-1.jpg" alt="Imagem Manchete">
+    </div>
+    <div class="texto-noticia">
+      <h2>Nova Tecnologia Promove Aprendizado Interativo nas Escolas</h2>
+      <p>O uso de tablets e aplicativos educacionais transforma a experiência de aprendizado para os adolescentes.</p>
+      <button class="ler-mais-btn" onclick="mostrarNoticia(this)">Ler Mais</button>
+      <div class="full-text">
+        <p>
+          Diversas escolas da região adotaram novas tecnologias, incluindo realidade aumentada e jogos educativos, tornando o aprendizado mais dinâmico e engajante. Professores relatam aumento significativo na participação e interesse dos alunos.
+        </p>
+        <div class="imagem-meliante">
+          <img src="https://i.postimg.cc/rFKW2RZq/download-3.jpg" alt="Foto Tecnologia">
+        </div>
+        <button class="ler-menos-btn" onclick="esconderNoticia(this)">Ler Menos</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notícia 4 -->
+  <div class="noticia">
+    <div class="imagem-manchete">
+      <img src="https://freeimage.host/i/K0VuL67" alt="Imagem Manchete">
+    </div>
+    <div class="texto-noticia">
+      <h2>Campeonato Escolar de Futebol Reúne Jovens Talentos</h2>
+      <p>O torneio esportivo incentiva a prática de esportes e promove integração entre estudantes de diferentes escolas.</p>
+      <button class="ler-mais-btn" onclick="mostrarNoticia(this)">Ler Mais</button>
+      <div class="full-text">
+        <p>
+          Durante o campeonato, jovens atletas mostraram habilidades impressionantes em campo. O evento também serviu para promover espírito esportivo, disciplina e trabalho em equipe entre os participantes, tornando-se um destaque positivo no calendário escolar.
+        </p>
+        <div class="imagem-meliante">
+          <img src="URL_FOTO_ATLETA_4" alt="Foto Atleta">
+        </div>
+        <button class="ler-menos-btn" onclick="esconderNoticia(this)">Ler Menos</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function mostrarNoticia(botao) {
+    const fullText = botao.nextElementSibling;
+    fullText.style.display = "block";
+    botao.style.display = "none";
+  }
+
+  function esconderNoticia(botao) {
+    const fullText = botao.parentElement;
+    fullText.style.display = "none";
+    const lerMaisBtn = fullText.previousElementSibling;
+    lerMaisBtn.style.display = "inline-block";
+  }
+</script>
+
+</body>
+</html>
