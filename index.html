@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INSIGHT - Notícias Neon</title>
-  <link rel="icon" type="image/png" href="favicon.ico"> <!-- ← Adicionado favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico"> <!-- Favicon -->
+
   <style>
     /* Reset básico */
     * {
@@ -13,99 +14,90 @@
       box-sizing: border-box;
       font-family: 'Arial', sans-serif;
     }
-    ...
+
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #ff0055;
+      padding: 20px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 0 0 10px #ff0055, 0 0 20px #ff00aa;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #ff0055;
+    }
+
+    .noticia {
+      margin-bottom: 50px;
+    }
+
+    .imagem-manchete img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #ff0055;
+      margin-bottom: 20px;
+    }
+
+    .texto-noticia h2 {
+      font-size: 2.2rem;
+      color: #ff3399;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #ff3399;
+    }
+
+    .texto-noticia p {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .ler-mais-btn, .ler-menos-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #ff0055;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-shadow: 0 0 5px #ff0055;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .ler-mais-btn:hover, .ler-menos-btn:hover {
+      background-color: #ff3399;
+    }
+
+    .full-text {
+      display: none;
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    .imagem-meliante {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .imagem-meliante img {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 2px solid #ff0055;
+    }
   </style>
-  /* Reset básico */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-
-  body {
-    background-color: #0a0a0a;
-    color: #fff;
-    line-height: 1.8;
-  }
-
-  header {
-    background: #ff0055;
-    padding: 20px;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff00aa;
-  }
-
-  .container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #111;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #ff0055;
-  }
-
-  .noticia {
-    margin-bottom: 50px;
-  }
-
-  .imagem-manchete img {
-    width: 100%;
-    border-radius: 10px;
-    border: 2px solid #ff0055;
-    margin-bottom: 20px;
-  }
-
-  .texto-noticia h2 {
-    font-size: 2.2rem;
-    color: #ff3399;
-    margin-bottom: 15px;
-    text-shadow: 0 0 10px #ff3399;
-  }
-
-  .texto-noticia p {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-
-  .ler-mais-btn, .ler-menos-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #ff0055;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-shadow: 0 0 5px #ff0055;
-    transition: 0.3s;
-    margin-top: 10px;
-  }
-
-  .ler-mais-btn:hover, .ler-menos-btn:hover {
-    background-color: #ff3399;
-  }
-
-  .full-text {
-    display: none;
-    margin-top: 15px;
-    font-size: 1.2rem;
-    color: #ddd;
-  }
-
-  .imagem-meliante {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .imagem-meliante img {
-    max-width: 100%;
-    border-radius: 10px;
-    border: 2px solid #ff0055;
-  }
-</style>
 </head>
 <body>
 
@@ -116,7 +108,7 @@
   <!-- Notícia 1 -->
   <div class="noticia">
     <div class="imagem-manchete">
-      <img src="https://i.postimg.cc/j2nhZz4s/download-2.jpg" alt=".">
+      <img src="https://i.postimg.cc/j2nhZz4s/download-2.jpg" alt="Briga Escolar">
     </div>
     <div class="texto-noticia">
       <h2>Briga Escolar Choca Comunidade Local</h2>
@@ -128,7 +120,7 @@
           A situação destaca a necessidade de medidas preventivas rigorosas para garantir a segurança no ambiente escolar, assim como políticas eficazes de mediação de conflitos entre alunos.
         </p>
         <div class="imagem-meliante">
-          <img src="https://i.postimg.cc/prVHjLfY/Captura-de-tela-2025-09-26-093217.png" alt="bryan nagossi">
+          <img src="https://i.postimg.cc/prVHjLfY/Captura-de-tela-2025-09-26-093217.png" alt="Bryan Nagossi">
         </div>
         <button class="ler-menos-btn" onclick="esconderNoticia(this)">Ler Menos</button>
       </div>
@@ -138,10 +130,10 @@
   <!-- Notícia 2 -->
   <div class="noticia">
     <div class="imagem-manchete">
-      <img src="https://i.postimg.cc/ydvnfQ9Z/download.jpg" alt="festival">
+      <img src="https://i.postimg.cc/ydvnfQ9Z/download.jpg" alt="Festival de Música">
     </div>
     <div class="texto-noticia">
-      <h2>Festival de Música Local Atraí Jovens da Cidade</h2>
+      <h2>Festival de Música Local Atrai Jovens da Cidade</h2>
       <p>O festival anual de música atraiu milhares de adolescentes, promovendo cultura e lazer na cidade.</p>
       <button class="ler-mais-btn" onclick="mostrarNoticia(this)">Ler Mais</button>
       <div class="full-text">
@@ -149,7 +141,7 @@
           O Festival Urbano reuniu artistas locais e bandas de rock e pop, oferecendo uma experiência segura e divertida para jovens da região. Os organizadores destacaram a importância de eventos culturais para a socialização e expressão artística dos adolescentes.
         </p>
         <div class="imagem-meliante">
-          <img src="https://i.postimg.cc/vBPm2zBH/images.webp" alt="Foto Artista">
+          <img src="https://i.postimg.cc/vBPm2zBH/images.webp" alt="Artista se apresentando">
         </div>
         <button class="ler-menos-btn" onclick="esconderNoticia(this)">Ler Menos</button>
       </div>
@@ -159,7 +151,7 @@
   <!-- Notícia 3 -->
   <div class="noticia">
     <div class="imagem-manchete">
-      <img src="https://i.postimg.cc/zf92T1Lg/download-1.jpg" alt="Imagem Manchete">
+      <img src="https://i.postimg.cc/zf92T1Lg/download-1.jpg" alt="Tecnologia na educação">
     </div>
     <div class="texto-noticia">
       <h2>Nova Tecnologia Promove Aprendizado Interativo nas Escolas</h2>
@@ -170,7 +162,7 @@
           Diversas escolas da região adotaram novas tecnologias, incluindo realidade aumentada e jogos educativos, tornando o aprendizado mais dinâmico e engajante. Professores relatam aumento significativo na participação e interesse dos alunos.
         </p>
         <div class="imagem-meliante">
-          <img src="https://i.postimg.cc/rFKW2RZq/download-3.jpg" alt="Foto Tecnologia">
+          <img src="https://i.postimg.cc/rFKW2RZq/download-3.jpg" alt="Foto Tecnologia Educacional">
         </div>
         <button class="ler-menos-btn" onclick="esconderNoticia(this)">Ler Menos</button>
       </div>
@@ -180,7 +172,7 @@
   <!-- Notícia 4 -->
   <div class="noticia">
     <div class="imagem-manchete">
-      <img src="https://freeimage.host/i/K0VuL67" alt="Imagem Manchete">
+      <img src="https://i.postimg.cc/fRmVScL2/campeonato.jpg" alt="Campeonato Escolar">
     </div>
     <div class="texto-noticia">
       <h2>Campeonato Escolar de Futebol Reúne Jovens Talentos</h2>
@@ -191,7 +183,7 @@
           Durante o campeonato, jovens atletas mostraram habilidades impressionantes em campo. O evento também serviu para promover espírito esportivo, disciplina e trabalho em equipe entre os participantes, tornando-se um destaque positivo no calendário escolar.
         </p>
         <div class="imagem-meliante">
-          <img src="URL_FOTO_ATLETA_4" alt="Foto Atleta">
+          <img src="https://i.postimg.cc/1R2J8pCH/atleta.jpg" alt="Foto Atleta">
         </div>
         <button class="ler-menos-btn" onclick="esconderNoticia(this)">Ler Menos</button>
       </div>
